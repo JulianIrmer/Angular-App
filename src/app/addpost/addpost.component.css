@@ -14,6 +14,8 @@
 
 .editor{
     margin: 50px 0 50px 0;
+    padding: 20px 0 20px 0;
+    box-shadow: 2px 2px 15px rgba(200,200,200,0.4);
 }
 
 .input-sm{

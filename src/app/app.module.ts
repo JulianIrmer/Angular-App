@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
 import { AddpostComponent } from './addpost/addpost.component';
+import { DataService } from './data.service';
 
 
 
@@ -19,7 +20,7 @@ import { AddpostComponent } from './addpost/addpost.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

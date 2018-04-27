@@ -1,36 +1,28 @@
 <!-- Post -->
 
-<div class="post" *ngFor = "let post of arr; let i = index;">
+<div class="post" *ngFor = "let post of posts; let i = index;">
   <div class="triangle"></div>
   <div class="post-header">
-    <h2>{{arr[i].title}}</h2>
-    by {{arr[i].author}}
+    <h2>{{posts[i].title}}</h2>
+    by {{posts[i].author}}
   </div>
   <div class="post-content">
-    <p>{{arr[i].content}}</p>
-    <div class="hashtags">
-      <ul class="hash-ul">
-        <li *ngFor = "let hashtag of arr[i].hashtags; let j = index;"><a href="#">#{{arr[i].hashtags[j]}}</a></li>
-      </ul>
-    </div>
+    <p>{{posts[i].content}}</p>
   </div>
 
-  <!-- Editor -->
+  <!-- Editor
   <input type="button" class="edit-btn" value="Edit" (click) = 'toggleEditor()'>
   <div *ngIf = isVisible class="editor">
     <form action="submit">
         <input type="text" class="input-sm" placeholder="Title" #title>
         <input type="text" class="input-sm" placeholder="Author" #author>
         <textarea class="input-sm" placeholder="Write something..." cols="42" rows="10" #content></textarea>
-        <input type="text" class="input-hash" placeholder="Hashtag" #hashtag1>
-        <input type="text" class="input-hash" placeholder="Hashtag" #hashtag2>
-        <input type="text" class="input-hash" placeholder="Hashtag" #hashtag3>
     </form>
-    <button class="save-btn" (click) = 'saveChanges(title.value, author.value, content.value, hashtag1.value, hashtag2.value, hashtag3.value)'>Save</button>
+    <button class="save-btn" (click) = 'saveChanges(i, title.value, author.value, content.value)'>Save</button>
     <button class="delete-btn" (click) = 'deletePost()'>Delete</button>
     <button class="delete-btn" (click) = 'toggleEditor()'>Cancel</button>
   </div>
-</div>
+</div> -->
 
 
 
