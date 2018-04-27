@@ -1,0 +1,131 @@
+/* POST */
+.post{
+    width: 100%;
+    padding: 0 0 10px 0;
+    margin: 0 0 100px 0;
+    box-shadow: 2px 2px 15px rgba(230,230,230,0.3);
+}
+
+.post-header{
+    text-align: center;
+    padding: 10px;
+    color: rgb(30, 30, 30);
+    background-color: rgba(100, 100, 255, 0.15);
+}
+
+.post-content{
+    text-align: justify;
+    letter-spacing: 0px;
+    font-size: 110%;
+    padding: 10px 10px 0 10px;
+}
+
+.triangle{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid rgb(30, 30, 30);
+    float: right;
+    transform: rotate(-45deg) translateX(11px) translateY(-7px);
+}
+
+.hashtags{
+    height: 150px;
+}
+
+.hash-ul{
+    list-style-type: none;
+    padding: 20px 0 10px 0;
+}
+
+.hash-ul > li{
+    float: left;
+    margin:0 20px 0 0;
+    padding: 5px;
+    color: rgb(30, 30, 30);
+    font-size: 80%;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 33%;
+}
+
+.hash-ul > li > a{
+    text-decoration-line: none;
+    color: rgb(30, 30, 30);
+}
+
+.hash-ul > li:hover{
+    background-color: rgba(200, 200, 200, 0.7);
+}
+
+
+
+/* EDITOR */
+.edit-btn, .delete-btn, .save-btn{
+    color: rgb(30, 30, 30);;
+    border: 0;
+    padding: 5px 5px 5px 5px;
+}
+
+.edit-btn{
+    margin: -15px 0 0 0;
+    box-shadow: 2px 2px 15px rgba(230,230,230,1);
+    float: right;
+}
+
+.edit-btn:hover{
+      background-color: rgba(0, 100, 0, 0.1);
+}
+
+.editor{
+    margin: 50px 0 0 0;
+}
+
+.input-sm{
+    width: 60%;
+    margin: 0 0 20px 0;
+}
+
+.input-sm:focus, .input-hash:focus{
+    background-color: rgb(245, 245, 245);
+}
+
+.edit-btn, .delete-btn, .save-btn{
+    color: rgb(30, 30, 30);;
+    border: 0;
+    padding: 5px 5px 5px 5px;
+}
+
+.edit-btn{
+    margin: -15px 0 0 0;
+    box-shadow: 2px 2px 15px rgba(230,230,230,1);
+    float: right;
+}
+
+.input-hash{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.input-hash:last-child{
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .edit-menu{
+        float: right;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-menu{
+        float: right;
+    }
+
+    .hash-ul > li{
+        margin: 0 10px 0 0;
+    }
+}

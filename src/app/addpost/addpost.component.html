@@ -1,0 +1,13 @@
+<button class="add-btn" (click) = 'toggleEditor()'>
+  +
+</button>
+
+<div *ngIf = isVisible class="editor">
+  <form action="submit">
+      <input type="text" class="input-sm" placeholder="Title" #title>
+      <input type="text" class="input-sm" placeholder="Author" #author>
+      <textarea class="input-sm" placeholder="Write something..." cols="42" rows="10" #content></textarea>
+  </form>
+  <button class="save-btn" (click) = 'savePost(title.value, author.value, content.value)'>Save</button>
+  <button class="cancel-btn" (click) = 'discardPost()'>Cancel</button>
+</div>
