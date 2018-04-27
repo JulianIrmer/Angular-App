@@ -26,7 +26,7 @@ export class PostComponent implements OnInit {
       id: 2,
       title: 'Hello There',
       author:'General Kenobi',
-      content: 'Hello! this is the first post ever made by me... and all of this is just an example. And someone stole my eggs. No breakfast. mad.',
+      content: 'And someone stole my eggs. No breakfast. mad.',
       hashtags: ["Star Wars", "hellothere", "Breakfast"]
     }
 
