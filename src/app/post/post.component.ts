@@ -22,8 +22,6 @@ export class PostComponent implements OnInit {
 
   toggleEditor(i){
     this.posts[i].isVisible = !this.posts[i].isVisible;
-    console.log(this.posts[i].isVisible);
-    console.log(this.posts[i].id);
   }
 
   saveChanges(id, title, author, content){
