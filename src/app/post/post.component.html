@@ -1,8 +1,9 @@
 <!-- Post -->
 
 <div class="post" *ngFor = "let post of posts; let i = index;">
-  <div class="triangle"></div>
+  <!-- <div class="triangle"></div> -->
   <div class="post-header">
+    <p id="index">#{{posts[i].id}}</p>
     <h2>{{posts[i].title}}</h2>
     by {{posts[i].author}}
   </div>
@@ -10,19 +11,19 @@
     <p>{{posts[i].content}}</p>
   </div>
 
-  <!-- Editor
-  <input type="button" class="edit-btn" value="Edit" (click) = 'toggleEditor()'>
-  <div *ngIf = isVisible class="editor">
+  <!-- Editor -->
+  <input type="button" class="edit-btn" value="Edit" (click) = 'toggleEditor(i)'>
+  <div *ngIf = "posts[i].isVisible" class="editor">
     <form action="submit">
-        <input type="text" class="input-sm" placeholder="Title" #title>
-        <input type="text" class="input-sm" placeholder="Author" #author>
-        <textarea class="input-sm" placeholder="Write something..." cols="42" rows="10" #content></textarea>
+        <input type="text" class="input-sm" value="{{posts[i].title}}" #title>
+        <input type="text" class="input-sm" value="{{posts[i].author}}" #author>
+        <textarea class="input-sm" value="{{posts[i].content}}" cols="42" rows="10" #content></textarea>
     </form>
     <button class="save-btn" (click) = 'saveChanges(i, title.value, author.value, content.value)'>Save</button>
-    <button class="delete-btn" (click) = 'deletePost()'>Delete</button>
-    <button class="delete-btn" (click) = 'toggleEditor()'>Cancel</button>
+    <button class="delete-btn" (click) = 'deletePost(i)'>Delete</button>
+    <button class="delete-btn" (click) = 'toggleEditor(i)'>Cancel</button>
   </div>
-</div> -->
+</div>
 
 
 

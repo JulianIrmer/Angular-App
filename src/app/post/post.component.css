@@ -21,7 +21,7 @@
 }
 
 /* EDITOR */
-/* .edit-btn, .delete-btn, .save-btn{
+.edit-btn, .delete-btn, .save-btn{
     color: rgb(30, 30, 30);;
     border: 0;
     padding: 5px 5px 5px 5px;
@@ -30,7 +30,6 @@
 .edit-btn{
     margin: -15px 0 0 0;
     box-shadow: 2px 2px 15px rgba(230,230,230,1);
-    float: right;
 }
 
 .edit-btn:hover{
@@ -56,24 +55,6 @@
     padding: 5px 5px 5px 5px;
 }
 
-.edit-btn{
-    margin: -15px 0 0 0;
-    box-shadow: 2px 2px 15px rgba(230,230,230,1);
-    float: right;
-}
-
-.input-hash{
-    width: 50%;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.input-hash:last-child{
-    margin-bottom: 20px;
-}
-
-
-
 @media (max-width: 768px) {
     .edit-menu{
         float: right;
@@ -84,8 +65,4 @@
     .edit-menu{
         float: right;
     }
-
-    .hash-ul > li{
-        margin: 0 10px 0 0;
-    }
-} */
+}

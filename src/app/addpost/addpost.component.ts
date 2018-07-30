@@ -12,7 +12,7 @@ export class AddpostComponent implements OnInit {
 isVisible:boolean = false;
 posts = [];
 post:Post;
-id:number = 1;
+id:number = 0;
 
   constructor(private postArr:DataService) {
     this.posts = postArr.getData();
@@ -26,19 +26,20 @@ id:number = 1;
     this.isVisible = !this.isVisible;
   }
 
-  savePost(title, author, content, hashtag1, hashtag2, hashtag3){
+  savePost(title, author, content){
 
     this.post = {
       id: this.id,
       title: title,
       author: author,
       content: content,
+      isVisible: false
     }
 
     this.id++;
 
     if(this.post.title != '' && this.post.author != '' && this.post.content != ''){
-      this.posts.push(this.post);
+      this.posts.unshift(this.post);
       this.toggleEditor();
     }
   }
@@ -49,4 +50,5 @@ interface Post{
   title:string,
   author:string,
   content:string,
+  isVisible:boolean
 }

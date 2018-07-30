@@ -20,25 +20,31 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleEditor(){
-    this.isVisible = !this.isVisible;
+  toggleEditor(i){
+    this.posts[i].isVisible = !this.posts[i].isVisible;
+    console.log(this.posts[i].isVisible);
+    console.log(this.posts[i].id);
   }
 
-  // saveChanges(id, title, author, content){
-  //   
-  //   for(let i = 0; i < this.posts.length; i++){
-  //     if(title != '' && this.posts[i].id == id){
-  //       this.posts[i].title = title;
-  //     }
-  //     if(author != '' && this.posts[i].id == id){
-  //       this.posts[i].author = author;
-  //     }
-  //     if(content != '' && this.posts[i].id == id){
-  //       this.posts[i].content = content;
-  //     }
-  //     this.toggleEditor();
-  //   }  
-  // }
+  saveChanges(id, title, author, content){
+    
+    for(let i = 0; i < this.posts.length; i++){
+      if(title != '' && this.posts[i].id == id){
+        this.posts[i].title = title;
+      }
+      if(author != '' && this.posts[i].id == id){
+        this.posts[i].author = author;
+      }
+      if(content != '' && this.posts[i].id == id){
+        this.posts[i].content = content;
+      }
+    }
+    this.toggleEditor(id);
+  }
+
+  deletePost(id){
+    this.posts.splice(id, 1);
+  }
 }
 
 
